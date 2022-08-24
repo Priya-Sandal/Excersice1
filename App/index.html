@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Exercise 1</title>
+</head>
+​
+<body>
+    <div id="app">
+        <p id="name">Name: {{name}}</p>
+        <p id="address">Address: {{address}}</p>
+        <p id="dob">DOB: {{dob}}</p>
+        <button @click="age">Age</button>
+        <div v-if="show">
+            <p v-if="isValidAge" :style="error">You are under age</p>
+            <p v-else>You are ok to use the website</p>
+        </div>
+        <div>
+            <ul>
+                <li v-for="user in users">
+                    <img :src="imgSrc" alt="" srcset="" style="width:100px; position: relative; top: 20px;">
+                    <span>Name: {{ user.name }}, </span>
+                    <span>Age:{{user.age}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+​
+</html>
